@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hina Shoukat | Graphic Designer, Logo & Brand Identity Portfolio</title>
+  <meta name="description" content="Explore original graphic design concepts by Hina Shoukat: logo design, mascot and symbol logos, brand identity, social media creatives, UI/UX, presentations, flyers and brochures." />
+  <meta name="keywords" content="Hina Shoukat, graphic designer portfolio, logo design, mascot logo, symbol logo, brand identity design, social media design, UI UX design, presentation design, flyer brochure design, Figma, Adobe Illustrator, Photoshop, Canva" />
+  <meta property="og:title" content="Hina Shoukat | Graphic Design & Brand Identity Portfolio" />
+  <meta property="og:description" content="Hina Shoukat’s graphic design portfolio featuring original concept logo design, brand identity, social media, UI/UX and presentation design projects." />
+  <meta name="author" content="Hina Shoukat" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#111111',
+            paper: '#F7F6F2',
+            line: '#E7E5DF',
+            blue: '#3157FF',
+            softblue: '#EEF2FF'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['DM Serif Display', 'Georgia', 'serif']
+          },
+          boxShadow: {
+            soft: '0 20px 60px rgba(17,17,17,.08)',
+            card: '0 10px 40px rgba(17,17,17,.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --paper:#F7F6F2;
+      --ink:#111111;
+      --muted:#686868;
+      --blue:#3157FF;
+      --line:#E7E5DF;
+      --dark:#0D0D0D;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Manrope,system-ui,sans-serif;
+      overflow-x:hidden;
+    }
+
+    ::selection{background:var(--ink);color:white}
+
+    /* Smooth page reveal */
+    body.preload{opacity:0}
+    body.loaded{
+      opacity:1;
+      transition:opacity .7s ease;
+    }
+
+    .display{
+      font-family:"DM Serif Display", Georgia, serif;
+      letter-spacing:-.045em;
+      font-weight:400;
+    }
+
+    .eyebrow{
+      font-size:11px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--blue);
+      font-weight:800;
+    }
+
+    .nav-link{
+      position:relative;
+      font-size:13px;
+      font-weight:600;
+      color:#222;
+      transition:color .25s ease;
+    }
+    .nav-link:after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      width:0;
+      height:1px;
+      background:var(--blue);
+      transition:width .3s ease;
+    }
+    .nav-link:hover{color:var(--blue)}
+    .nav-link:hover:after{width:100%}
+
+    .magnetic{
+      transition:transform .25s cubic-bezier(.2,.8,.2,1);
+      will-change:transform;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      border-radius:999px;
+      padding:14px 21px;
+      font-size:12px;
+      font-weight:800;
+      transition:transform .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+    }
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn-dark:hover{background:#2a2a2a;box-shadow:0 12px 30px rgba(17,17,17,.18)}
+    .btn-outline{border:1px solid #CFCFC9;color:#111}
+    .btn-outline:hover{background:#111;color:#fff;border-color:#111}
+
+    /* Header */
+    .site-header{
+      position:fixed;
+      z-index:100;
+      top:0;
+      left:0;
+      right:0;
+      height:76px;
+      background:rgba(247,246,242,.82);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(231,229,223,.55);
+      transition:height .35s ease, background .35s ease, box-shadow .35s ease;
+    }
+    .site-header.scrolled{
+      height:66px;
+      box-shadow:0 10px 35px rgba(0,0,0,.04);
+    }
+
+    .logo-mark{
+      font-family:"DM Serif Display",Georgia,serif;
+      font-size:27px;
+      letter-spacing:-.08em;
+    }
+
+    /* Hero */
+    .hero{
+      min-height:100vh;
+      padding-top:76px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-grid{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      opacity:.34;
+      background-image:
+        linear-gradient(to right, rgba(17,17,17,.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(17,17,17,.045) 1px, transparent 1px);
+      background-size:80px 80px;
+      mask-image:linear-gradient(to bottom,black 0%,transparent 80%);
+    }
+
+    .hero-orb{
+      position:absolute;
+      width:390px;
+      height:390px;
+      right:3%;
+      top:17%;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(49,87,255,.17),rgba(49,87,255,0) 65%);
+      filter:blur(8px);
+      animation:orbFloat 7s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes orbFloat{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(-18px,15px,0) scale(1.06)}
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero-title{
+      font-size:clamp(58px,8vw,116px);
+      line-height:.9;
+      max-width:800px;
+    }
+
+    .hero-copy{
+      max-width:560px;
+      font-size:17px;
+      line-height:1.75;
+      color:#5D5D5D;
+    }
+
+    /* Portrait / visual */
+    .portrait-wrap{
+      position:relative;
+      width:min(500px,80vw);
+      aspect-ratio:1;
+      margin:auto;
+    }
+    .portrait-ring{
+      position:absolute;
+      inset:0;
+      border:1px solid rgba(17,17,17,.1);
+      border-radius:50%;
+      animation:spinSlow 24s linear infinite;
+    }
+    .portrait-ring:before,
+    .portrait-ring:after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      background:var(--blue);
+      box-shadow:0 0 0 6px var(--paper);
+    }
+    .portrait-ring:before{
+      width:7px;height:7px;right:8%;top:17%;
+    }
+    .portrait-ring:after{
+      width:6px;height:6px;left:7%;bottom:20%;
+    }
+    .portrait-ring.r2{
+      inset:7%;
+      border-color:rgba(17,17,17,.08);
+      animation-direction:reverse;
+      animation-duration:32s;
+    }
+    .portrait-ring.r3{
+      inset:15%;
+      border-style:dashed;
+      border-color:rgba(17,17,17,.07);
+      animation-duration:42s;
+    }
+    @keyframes spinSlow{to{transform:rotate(360deg)}}
+
+    .portrait{
+      position:absolute;
+      inset:18%;
+      border-radius:50%;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 52% 33%, #e9e9e9 0 18%, transparent 18.5%),
+        linear-gradient(145deg,#dedede,#9e9e9e);
+      border:10px solid white;
+      box-shadow:0 18px 60px rgba(17,17,17,.14);
+    }
+    .portrait:before{
+      content:"HS";
+      position:absolute;
+      inset:0;
+      display:grid;
+      place-items:center;
+      font-family:"DM Serif Display",serif;
+      font-size:100px;
+      color:rgba(17,17,17,.12);
+      z-index:0;
+    }
+    .portrait:after{
+      content:"";
+      position:absolute;
+      left:25%;
+      right:25%;
+      bottom:0;
+      height:50%;
+      border-radius:48% 48% 0 0;
+      background:#171717;
+      z-index:1;
+    }
+
+    .orbit-badge{
+      position:absolute;
+      z-index:5;
+      right:3%;
+      bottom:12%;
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      background:#111;
+      color:#fff;
+      display:grid;
+      place-items:center;
+      box-shadow:0 20px 40px rgba(0,0,0,.18);
+      animation:badgeFloat 4s ease-in-out infinite;
+    }
+    .orbit-badge .badge-text{
+      position:absolute;
+      inset:9px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      font-size:9px;
+      line-height:1.25;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      font-weight:800;
+    }
+    .orbit-badge .arrow{
+      font-size:25px;
+      transform:translateY(1px);
+    }
+    @keyframes badgeFloat{
+      0%,100%{transform:translateY(0) rotate(-5deg)}
+      50%{transform:translateY(-10px) rotate(5deg)}
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:30px;
+      max-width:650px;
+    }
+    .stat-number{
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:-.05em;
+    }
+    .stat-label{
+      margin-top:4px;
+      font-size:11px;
+      color:#6b6b6b;
+      line-height:1.35;
+    }
+
+    /* Brand strip */
+    .brand-strip{
+      background:#0d0d0d;
+      color:#fff;
+      overflow:hidden;
+    }
+    .brand-track{
+      display:flex;
+      align-items:center;
+      gap:60px;
+      min-width:max-content;
+      animation:marquee 26s linear infinite;
+    }
+    @keyframes marquee{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+    .brand-item{
+      opacity:.68;
+      font-size:17px;
+      font-weight:700;
+      letter-spacing:-.03em;
+      white-space:nowrap;
+    }
+    .brand-lead{
+      opacity:.9;
+      font-size:11px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    /* Dark work section */
+    .work-section{
+      background:#0d0d0d;
+      color:white;
+      position:relative;
+      overflow:hidden;
+    }
+    .work-section:before{
+      content:"";
+      position:absolute;
+      width:700px;height:700px;
+      right:-300px;top:-250px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(49,87,255,.16),transparent 65%);
+      pointer-events:none;
+    }
+
+    .project-grid{
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:18px;
+    }
+    .project-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:22px;
+      min-height:280px;
+      cursor:pointer;
+      isolation:isolate;
+    }
+    .project-card.large{min-height:560px}
+    .project-card .project-bg{
+      position:absolute;
+      inset:0;
+      transition:transform .8s cubic-bezier(.2,.7,.2,1);
+    }
+    .project-card:hover .project-bg{transform:scale(1.055)}
+    .project-overlay{
+      position:absolute;
+      inset:0;
+      z-index:2;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      padding:28px;
+      background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,.04) 65%);
+    }
+
+    .pf{
+      background:
+        radial-gradient(circle at 25% 28%,rgba(255,255,255,.7) 0 2%,transparent 2.3%),
+        linear-gradient(135deg,#d9efe9,#f4f1e9 55%,#b9d8ce);
+    }
+    .pf:after{
+      content:"Vellunora Home";
+      position:absolute;
+      left:12%;top:26%;
+      font-size:clamp(34px,5vw,74px);
+      font-weight:800;
+      letter-spacing:-.07em;
+      color:#164a42;
+      opacity:.82;
+    }
+    .aska{
+      background:linear-gradient(135deg,#e7efff,#fff 55%,#d8e4ff);
+    }
+    .aska:after{
+      content:"Orivelle Pay";
+      position:absolute;
+      left:10%;top:23%;
+      font-size:clamp(50px,7vw,90px);
+      font-weight:800;
+      color:#3157ff;
+      letter-spacing:-.09em;
+    }
+    .ember{
+      background:
+        radial-gradient(circle at 75% 30%,rgba(255,126,32,.5),transparent 23%),
+        linear-gradient(145deg,#151515,#27221e);
+    }
+    .ember:after{
+      content:"EMBER\\A ESCAPES";
+      white-space:pre;
+      position:absolute;
+      left:10%;top:22%;
+      font-family:"DM Serif Display",serif;
+      font-size:clamp(35px,4vw,62px);
+      line-height:.9;
+      color:#fff;
+    }
+
+    /* Original portfolio-only concept visuals: no third-party artwork or logos */
+    .bean{background:radial-gradient(circle at 72% 28%,#d8a56d 0 8%,transparent 8.5%),linear-gradient(135deg,#173f35,#315d4b 52%,#e6d2ad)}
+    .bean:after{content:"ROASTRA &\A RUE";white-space:pre;position:absolute;left:9%;top:20%;font-family:"DM Serif Display",serif;font-size:clamp(44px,5vw,72px);line-height:.9;color:#f8edda;letter-spacing:-.04em}
+    .mascot{background:radial-gradient(circle at 50% 42%,#ffd166 0 19%,transparent 19.5%),linear-gradient(135deg,#5a189a,#9d4edd 55%,#240046)}
+    .mascot:before{content:"✦";position:absolute;left:42%;top:18%;font-size:95px;color:#fff3b0;text-shadow:0 8px 35px #240046}
+    .mascot:after{content:"VOLTPUP ARCADE";position:absolute;left:8%;right:8%;top:68%;text-align:center;font-weight:800;letter-spacing:.12em;font-size:clamp(20px,2.5vw,34px);color:white}
+    .symbol{background:linear-gradient(135deg,#f3e8d3,#d7e4de)}
+    .symbol:before{content:"V";position:absolute;left:34%;top:4%;width:32%;height:70%;display:grid;place-items:center;border:4px solid #153b32;border-radius:48% 48% 12% 12%;font-family:"DM Serif Display",serif;font-size:clamp(95px,13vw,180px);color:#153b32;transform:rotate(45deg)}
+    .symbol:after{content:"MOSSORA  /  BOTANICAL SKINCARE";position:absolute;bottom:14%;left:5%;right:5%;text-align:center;color:#153b32;font-size:clamp(10px,1vw,14px);font-weight:800;letter-spacing:.12em}
+    .social{background:linear-gradient(125deg,#ff6b6b,#ffb703 52%,#fb8500)}
+    .social:before{content:"MAKE\A ROOM\A FOR JOY";white-space:pre;position:absolute;left:9%;top:12%;font-size:clamp(38px,5vw,68px);font-weight:800;line-height:.88;letter-spacing:-.08em;color:#222}
+    .social:after{content:"SUNMORI · SOCIAL CAMPAIGN";position:absolute;left:9%;bottom:13%;font-size:11px;font-weight:800;letter-spacing:.12em;color:#222}
+    .uiux{background:linear-gradient(135deg,#071b35,#164e63 60%,#6fffe9)}
+    .uiux:before{content:"NUVANTA\A WALLET";white-space:pre;position:absolute;left:8%;top:13%;font-size:clamp(29px,3vw,45px);font-weight:800;line-height:.95;color:#e8ffff}
+    .uiux:after{content:"◉     $2,480.50\A\A  Spending overview     ↗";white-space:pre;position:absolute;right:8%;bottom:12%;padding:22px;border-radius:18px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.45);font-size:clamp(13px,1.4vw,20px);line-height:1.8;color:white;backdrop-filter:blur(8px)}
+    .pitch{background:linear-gradient(135deg,#171717,#343434)}
+    .pitch:before{content:"PITCHCRAFT\A STUDIO.";white-space:pre;position:absolute;left:9%;top:12%;font-family:"DM Serif Display",serif;font-size:clamp(42px,5vw,72px);line-height:.88;color:#f5f0e8}
+    .pitch:after{content:"STRATEGY DECK  /  PRESENTATION DESIGN";position:absolute;left:9%;bottom:14%;color:#b5ff6d;font-size:10px;letter-spacing:.12em;font-weight:800}
+    .editorial{background:linear-gradient(135deg,#f8e8d8,#dba58f)}
+    .editorial:before{content:"SAFFRON\A & SLATE";white-space:pre;position:absolute;left:10%;top:9%;font-family:"DM Serif Display",serif;font-size:clamp(48px,6vw,82px);line-height:.8;color:#542a22}
+    .editorial:after{content:"A FOOD JOURNAL  ·  ISSUE 01";position:absolute;left:10%;bottom:14%;color:#542a22;font-size:10px;letter-spacing:.12em;font-weight:800}
+    .fitness{background:radial-gradient(circle at 75% 28%,rgba(255,255,255,.15),transparent 20%),linear-gradient(135deg,#111,#292929 55%,#b6ff3b)}
+    .fitness:before{content:"KINETIQ";position:absolute;left:8%;top:18%;font-size:clamp(54px,8vw,100px);font-weight:800;letter-spacing:-.1em;color:white}
+    .fitness:after{content:"MOVE WITH PURPOSE  /  FITNESS BRAND";position:absolute;left:9%;bottom:16%;color:#b6ff3b;font-size:10px;font-weight:800;letter-spacing:.12em}
+    .gaming{background:linear-gradient(135deg,#101027,#29235c 60%,#ff4ecd)}
+    .gaming:before{content:"B";position:absolute;left:36%;top:2%;font-size:clamp(150px,19vw,240px);font-weight:800;line-height:1;color:#f6f1ff;text-shadow:9px 9px 0 #ff4ecd}
+    .gaming:after{content:"PIXELPACT  /  GAMING COMMUNITY";position:absolute;left:7%;bottom:14%;color:#fff;font-size:10px;font-weight:800;letter-spacing:.14em}
+    .campaign{background:linear-gradient(135deg,#dce7ff,#f4f0ff 55%,#b8c8ff)}
+    .campaign:before{content:"BRIGHTPATH\A GROWTH";white-space:pre;position:absolute;left:8%;top:12%;font-size:clamp(36px,4.5vw,64px);font-weight:800;line-height:.88;letter-spacing:-.07em;color:#263a85}
+    .campaign:after{content:"SOCIAL ADS · BRAND CAMPAIGN";position:absolute;left:9%;bottom:14%;font-size:10px;font-weight:800;letter-spacing:.12em;color:#263a85}
+    .project-grid-more{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px}
+    .project-grid-more .project-card{min-height:300px}
+    .project-note{color:rgba(255,255,255,.45);font-size:11px;margin-top:18px}
+    @media(max-width:1023px){.project-grid-more{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.project-grid-more{grid-template-columns:1fr}}
+
+    .project-tag{
+      color:#fff;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      opacity:.65;
+    }
+    .project-name{
+      margin-top:5px;
+      font-size:21px;
+      font-weight:700;
+      letter-spacing:-.04em;
+    }
+
+    .case-study-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+    .case-study-tile{min-height:142px;border:1px solid #e5e2dc;border-radius:16px;padding:17px;background:linear-gradient(145deg,#fff,#f5f3ee);display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+    .case-study-tile strong{font-size:15px;line-height:1.35;color:#202020}
+    .case-study-tile small{font-size:11px;color:#777}
+    .case-kicker{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#666}
+    .swatches{display:flex;gap:6px}
+    .swatches i{display:block;width:27px;height:27px;border-radius:50%;background:var(--swatch,#3157ff);border:1px solid rgba(0,0,0,.08)}
+    @media(max-width:640px){.case-study-grid{grid-template-columns:1fr}.case-study-tile{min-height:105px}}
+    /* Services */
+    .service-card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.25);
+      border-radius:18px;
+      padding:26px;
+      min-height:225px;
+      transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease, background .45s ease;
+    }
+    .service-card:hover{
+      transform:translateY(-8px);
+      background:white;
+      box-shadow:var(--shadow,0 18px 45px rgba(17,17,17,.08));
+    }
+    .service-icon{
+      width:48px;height:48px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#EEF2FF;
+      color:var(--blue);
+      margin-bottom:24px;
+    }
+
+    /* Mini portfolio artwork inside service cards */
+    .service-card{padding:16px;min-height:0;overflow:hidden}
+    .service-art{height:148px;border-radius:13px;overflow:hidden;position:relative;margin-bottom:20px;isolation:isolate}
+    .service-art:after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid rgba(0,0,0,.06);border-radius:13px}
+    .service-art .art-label{font-size:8px;letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+    .art-brand{background:#e8e4d9;display:grid;place-items:center;color:#173c2c}
+    .art-brand .brand-sheet{width:72%;height:76%;background:#f8f4e8;box-shadow:0 8px 22px #10291b20;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-3deg)}
+    .art-brand .brand-mark{font-family:Georgia,serif;font-size:35px;line-height:1}
+    .art-brand .brand-name{font-family:Georgia,serif;font-size:15px;letter-spacing:.08em;margin-top:6px}
+    .art-brand .brand-line{height:2px;width:35px;background:#b8794e;margin-top:9px}
+    .art-logo{background:#161c2d;display:grid;place-items:center;color:#fff}
+    .art-logo .logo-sheet{width:75%;height:76%;border:1px solid #ffffff35;display:grid;place-items:center;position:relative}
+    .art-logo .logo-symbol{font-size:48px;font-weight:800;letter-spacing:-.12em;color:#d4ff62;line-height:1}
+    .art-logo .logo-caption{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-size:8px;letter-spacing:.2em;color:#ffffffb5}
+    .art-ui{background:#dbe7e2;padding:13px;display:flex;gap:9px;align-items:center;justify-content:center}
+    .art-ui .phone{height:122px;width:65px;border:3px solid #172a27;border-radius:12px;background:#f8fbf8;padding:8px 5px;box-shadow:0 7px 15px #152e2920}
+    .art-ui .phone-head{height:5px;width:24px;border-radius:5px;background:#d7e1da;margin-bottom:9px}
+    .art-ui .phone-balance{height:31px;border-radius:5px;background:#244f43;margin-bottom:6px}
+    .art-ui .phone-row{height:7px;border-radius:3px;background:#d9e2dc;margin:5px 0}
+    .art-ui .ui-panel{width:80px;height:94px;background:#fff;border-radius:7px;padding:9px;box-shadow:0 7px 15px #152e2910}
+    .art-ui .ui-dot{width:23px;height:23px;border-radius:50%;background:#d6ed78;margin-bottom:8px}
+    .art-social{background:#f4d8ce;display:flex;align-items:center;justify-content:center;gap:7px;padding:12px}
+    .art-social .social-tile{height:112px;flex:1;max-width:80px;border-radius:5px;padding:9px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 15px #48251a18}
+    .art-social .social-tile:first-child{background:#283b31;color:#fff;transform:rotate(-5deg)}
+    .art-social .social-tile:nth-child(2){background:#f8efe1;color:#283b31;transform:translateY(-5px)}
+    .art-social .social-tile:nth-child(3){background:#bd5e45;color:#fff;transform:rotate(5deg)}
+    .art-social .social-big{font-family:Georgia,serif;font-size:20px;line-height:1.05}
+    .art-social .social-small{font-size:7px;letter-spacing:.12em;text-transform:uppercase}
+    .art-presentation{background:#e3e4f7;display:grid;place-items:center;padding:15px}
+    .art-presentation .slide{width:84%;height:108px;background:#20223b;color:#fff;padding:14px;position:relative;box-shadow:0 8px 18px #22234b25;transform:rotate(-2deg)}
+    .art-presentation .slide .slide-kicker{font-size:7px;letter-spacing:.17em;color:#c7d0ff;text-transform:uppercase}
+    .art-presentation .slide .slide-title{font-family:Georgia,serif;font-size:23px;line-height:1.02;margin-top:12px;max-width:130px}
+    .art-presentation .slide .slide-orb{position:absolute;width:44px;height:44px;border-radius:50%;right:13px;bottom:12px;background:linear-gradient(135deg,#f6bd70,#d36b70)}
+    .service-card .service-icon{display:none}
+    .service-card h3{font-size:18px}
+    .service-card .service-art{transition:transform .4s ease}
+    .service-card:hover .service-art{transform:scale(1.025)}
+    @media(max-width:640px){.service-art{height:165px}.service-card{padding:14px}}
+
+    /* Process */
+    .process-section{
+      background:#0d0d0d;
+      color:#fff;
+      overflow:hidden;
+    }
+    .process-line{
+      position:absolute;
+      left:8%;
+      right:8%;
+      top:25px;
+      height:1px;
+      background:rgba(255,255,255,.16);
+    }
+    .process-item{position:relative;z-index:2}
+    .process-icon{
+      width:50px;height:50px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.38);
+      display:grid;
+      place-items:center;
+      margin:0 auto 18px;
+      background:#0d0d0d;
+      font-size:18px;
+      transition:transform .35s ease, border-color .35s ease, background .35s ease;
+    }
+    .process-item:hover .process-icon{
+      transform:rotate(12deg) scale(1.1);
+      border-color:white;
+      background:#fff;
+      color:#111;
+    }
+
+    /* Testimonials */
+    .testimonial{
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.32);
+      padding:30px;
+      transition:transform .4s ease, background .4s ease;
+    }
+    .testimonial:hover{
+      transform:translateY(-6px);
+      background:white;
+    }
+    .quote{
+      font-size:35px;
+      line-height:.7;
+      color:#BDBDB8;
+    }
+    .stars{letter-spacing:2px;font-size:12px;margin-top:16px}
+
+    /* Contact */
+    .contact-section{
+      position:relative;
+      overflow:hidden;
+      background:#3157FF;
+      color:#fff;
+    }
+    .contact-section:before{
+      content:"";
+      position:absolute;
+      width:600px;height:600px;
+      right:-180px;top:-300px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 0 0 80px rgba(255,255,255,.025),0 0 0 160px rgba(255,255,255,.018);
+    }
+    .contact-title{
+      font-size:clamp(55px,8vw,110px);
+      line-height:.88;
+    }
+
+    /* Scroll reveal */
+    .reveal{
+      opacity:0;
+      transform:translateY(28px);
+      transition:opacity .85s cubic-bezier(.2,.7,.2,1), transform .85s cubic-bezier(.2,.7,.2,1);
+    }
+    .reveal.is-visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+    .reveal.delay-1{transition-delay:.1s}
+    .reveal.delay-2{transition-delay:.2s}
+    .reveal.delay-3{transition-delay:.3s}
+    .reveal.delay-4{transition-delay:.4s}
+
+    /* Custom cursor */
+    .cursor{
+      position:fixed;
+      width:13px;height:13px;
+      border-radius:50%;
+      background:#111;
+      pointer-events:none;
+      z-index:9999;
+      transform:translate(-50%,-50%);
+      transition:width .2s ease,height .2s ease,background .2s ease,opacity .2s ease;
+      mix-blend-mode:difference;
+    }
+    .cursor.big{width:52px;height:52px;background:white}
+    @media (pointer:coarse){.cursor{display:none}}
+
+    /* Mobile menu */
+    .mobile-menu{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .4s ease;
+    }
+    .mobile-menu.open{max-height:360px}
+
+    /* Modal */
+    .modal{
+      position:fixed;
+      inset:0;
+      z-index:300;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      background:rgba(0,0,0,.68);
+      backdrop-filter:blur(10px);
+    }
+    .modal.open{display:flex}
+    .modal-panel{
+      width:min(920px,100%);
+      max-height:90vh;
+      overflow:auto;
+      background:var(--paper);
+      color:#111;
+      border-radius:26px;
+      box-shadow:0 40px 100px rgba(0,0,0,.35);
+      animation:modalIn .45s cubic-bezier(.2,.8,.2,1);
+    }
+    @keyframes modalIn{
+      from{opacity:0;transform:translateY(25px) scale(.97)}
+      to{opacity:1;transform:translateY(0) scale(1)}
+    }
+    .modal-visual{
+      min-height:320px;
+      border-radius:20px;
+      overflow:hidden;
+      position:relative;
+    }
+    .close-btn{
+      width:42px;height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#111;
+      color:white;
+      transition:transform .25s ease;
+    }
+    .close-btn:hover{transform:rotate(90deg)}
+
+    /* Spin / loop element */
+    .spin-loop{
+      animation:spinSlow 15s linear infinite;
+    }
+
+    @media(max-width:1023px){
+      .hero{padding-top:100px}
+      .project-grid{grid-template-columns:1fr}
+      .project-card.large{min-height:450px}
+      .process-line{display:none}
+    }
+
+    @media(max-width:767px){
+      .site-header{height:68px}
+      .hero{padding-top:95px}
+      .hero-title{font-size:58px}
+      .stats{grid-template-columns:repeat(2,1fr);gap:24px}
+      .portrait-wrap{width:min(390px,92vw)}
+      .orbit-badge{width:88px;height:88px;right:0}
+      .project-card.large{min-height:390px}
+      .project-card{min-height:240px}
+      .brand-track{gap:35px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{
+        animation-duration:.001ms!important;
+        animation-iteration-count:1!important;
+        scroll-behavior:auto!important;
+        transition-duration:.001ms!important;
+      }
+    }
+  </style>
+</head>
+
+<body class="preload">
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <div class="mx-auto max-w-[1320px] h-full px-5 md:px-8 flex items-center justify-between">
+      <a href="#home" class="logo-mark magnetic" data-magnetic>HS</a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#approach">My Approach</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <button class="w-10 h-10 rounded-full bg-ink text-white grid place-items-center hover:rotate-12 transition" id="themeToggle" aria-label="Toggle theme">☾</button>
+        <a href="#contact" class="btn btn-dark magnetic" data-magnetic>
+          Let’s Work Together <span>→</span>
+        </a>
+      </div>
+
+      <button class="md:hidden w-11 h-11 rounded-full bg-ink text-white grid place-items-center" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+
+    <div class="mobile-menu md:hidden bg-paper border-b border-line" id="mobileMenu">
+      <nav class="px-6 py-5 flex flex-col gap-5">
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#approach">My Approach</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-dark w-full">Let’s Work Together →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero flex items-center">
+      <div class="hero-grid"></div>
+      <div class="hero-orb"></div>
+
+      <div class="mx-auto max-w-[1320px] w-full px-5 md:px-8 py-20 md:py-28">
+        <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-12 lg:gap-4 items-center hero-content">
+
+          <div class="reveal">
+            <div class="eyebrow mb-6">Hello, I’m</div>
+
+            <h1 class="display hero-title">
+              Hina<br class="hidden sm:block"> Shoukat
+            </h1>
+
+            <p class="mt-7 text-xl md:text-2xl tracking-[-.035em] font500">
+              Graphic Designer &amp; Brand Specialist
+            </p>
+
+            <p class="hero-copy mt-5">
+              I create bold visual identities and digital experiences that help businesses
+              stand out, build trust and connect with their audiences.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 mt-8">
+              <a href="#work" class="btn btn-dark magnetic" data-magnetic>
+                View My Work <span>→</span>
+              </a>
+              <button class="flex items-center gap-3 group" id="showreelBtn">
+                <span class="w-11 h-11 rounded-full border border-[#D4D3CD] bg-white grid place-items-center group-hover:scale-110 transition">▶</span>
+                <span class="text-xs font-bold">Watch Showreel</span>
+              </button>
+            </div>
+
+            <div class="stats mt-12">
+              <div>
+                <div class="stat-number counter" data-target="50">0+</div>
+                <div class="stat-label">Selected Projects</div>
+              </div>
+              <div>
+                <div class="stat-number counter" data-target="30">0+</div>
+                <div class="stat-label">Creative Concepts</div>
+              </div>
+              <div>
+                <div class="stat-number counter" data-target="5">0+</div>
+                <div class="stat-label">Design Services</div>
+              </div>
+              <div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Design Focus</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal delay-2">
+            <div class="portrait-wrap" id="portraitParallax">
+              <div class="portrait-ring"></div>
+              <div class="portrait-ring r2"></div>
+              <div class="portrait-ring r3"></div>
+              <div class="portrait">
+                <!-- Replace this visual with your own professional portrait if desired -->
+              </div>
+              <div class="orbit-badge">
+                <div class="badge-text">BRANDING · DESIGN · DIGITAL ·</div>
+                <div class="arrow">↗</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="brand-strip py-7">
+      <div class="overflow-hidden">
+        <div class="brand-track">
+          <span class="brand-lead">Trusted creative tools</span>
+          <span class="brand-item">Upwork</span>
+          <span class="brand-item">Canva</span>
+          <span class="brand-item">Figma</span>
+          <span class="brand-item">Adobe</span>
+          <span class="brand-item">Photoshop</span>
+          <span class="brand-item">Illustrator</span>
+          <span class="brand-item">PowerPoint</span>
+
+          <span class="brand-lead">Trusted creative tools</span>
+          <span class="brand-item">Upwork</span>
+          <span class="brand-item">Canva</span>
+          <span class="brand-item">Figma</span>
+          <span class="brand-item">Adobe</span>
+          <span class="brand-item">Photoshop</span>
+          <span class="brand-item">Illustrator</span>
+          <span class="brand-item">PowerPoint</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section id="work" class="work-section py-24 md:py-32">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-8 relative z-10">
+
+        <div class="grid lg:grid-cols-[.72fr_1.28fr] gap-12 items-end mb-14">
+          <div class="reveal">
+            <div class="eyebrow">Featured Work</div>
+            <h2 class="display text-5xl md:text-7xl mt-5 leading-[.94]">Designs That<br>Make an Impact</h2>
+            <p class="text-white/55 mt-7 max-w-md text-sm md:text-base leading-7">
+              A curated selection of brand identities, digital experiences and visual systems
+              created to make businesses look credible, memorable and ready to grow.
+            </p>
+            <a href="#services" class="btn btn-outline border-white/25 text-white mt-8 magnetic" data-magnetic>
+              Explore My Services <span>→</span>
+            </a>
+          </div>
+
+          <div class="text-right hidden lg:block reveal delay-1">
+            <span class="text-xs uppercase tracking-[.18em] text-white/35">Original concept projects · 2026</span>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card large reveal delay-1 project-open" data-project="Vellunora Home">
+            <div class="project-bg pf"></div>
+            <div class="project-overlay">
+              <div class="project-tag">Brand Identity Design</div>
+              <div class="project-name">Vellunora Home</div>
+              <div class="text-xs text-white/55 mt-1">Beauty &amp; Wellness Visual System</div>
+            </div>
+          </article>
+
+          <div class="grid gap-4">
+            <article class="project-card reveal delay-2 project-open" data-project="Orivelle Pay">
+              <div class="project-bg aska"></div>
+              <div class="project-overlay">
+                <div class="project-tag">Fintech Branding</div>
+                <div class="project-name">Orivelle Pay</div>
+              </div>
+            </article>
+
+            <article class="project-card reveal delay-3 project-open" data-project="Cindervoyage">
+              <div class="project-bg ember"></div>
+              <div class="project-overlay">
+                <div class="project-tag">Travel Branding</div>
+                <div class="project-name">Cindervoyage</div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-grid project-grid-more">
+          <article class="project-card reveal project-open" data-project="KoffiRuna">
+            <div class="project-bg bean"></div><div class="project-overlay"><div class="project-tag">Logo &amp; Brand Identity</div><div class="project-name">Roastra &amp; Rue</div><div class="text-xs text-white/60 mt-1">Specialty Coffee Brand Concept</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Zappawisp">
+            <div class="project-bg mascot"></div><div class="project-overlay"><div class="project-tag">Mascot Logo Design</div><div class="project-name">Zappawisp</div><div class="text-xs text-white/60 mt-1">Playful Gaming Mascot Concept</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Folivanta">
+            <div class="project-bg symbol"></div><div class="project-overlay"><div class="project-tag">Symbol Logo Design</div><div class="project-name">Folivanta</div><div class="text-xs text-white/60 mt-1">Minimal Botanical Mark Concept</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Solivique">
+            <div class="project-bg social"></div><div class="project-overlay"><div class="project-tag">Social Media Design</div><div class="project-name">Solivique</div><div class="text-xs text-white/60 mt-1">Bright Lifestyle Campaign</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Virello Ledger">
+            <div class="project-bg uiux"></div><div class="project-overlay"><div class="project-tag">UI/UX Design</div><div class="project-name">Virello Ledger</div><div class="text-xs text-white/60 mt-1">Mobile Dashboard Concept</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Deckora Atelier">
+            <div class="project-bg pitch"></div><div class="project-overlay"><div class="project-tag">Presentation Design</div><div class="project-name">Deckora Atelier</div><div class="text-xs text-white/60 mt-1">Modern Business Pitch Deck</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Saffrelune">
+            <div class="project-bg editorial"></div><div class="project-overlay"><div class="project-tag">Editorial &amp; Print Design</div><div class="project-name">Saffrelune</div><div class="text-xs text-white/60 mt-1">Food Journal / Brochure Concept</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Kinetara Motion">
+            <div class="project-bg fitness"></div><div class="project-overlay"><div class="project-tag">Fitness Brand Identity</div><div class="project-name">Kinetara Motion</div><div class="text-xs text-white/60 mt-1">Wordmark &amp; Campaign Direction</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Pixora Rift">
+            <div class="project-bg gaming"></div><div class="project-overlay"><div class="project-tag">Lettermark Logo Design</div><div class="project-name">Pixora Rift</div><div class="text-xs text-white/60 mt-1">Gaming Community Brand Concept</div></div>
+          </article>
+          <article class="project-card reveal project-open" data-project="Bravelynt">
+            <div class="project-bg campaign"></div><div class="project-overlay"><div class="project-tag">Advertising &amp; Banner Design</div><div class="project-name">Bravelynt</div><div class="text-xs text-white/60 mt-1">Digital Campaign Creative</div></div>
+          </article>
+        </div>
+        <p class="project-note">Portfolio concept work: these fictional brand studies were created independently to demonstrate my design approach and are not paid client projects or affiliated with real companies. Names are creative placeholders, not verified or cleared trademarks; please do not treat them as available for commercial use without an appropriate search.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 md:py-32">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-8">
+
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 reveal">
+          <div>
+            <div class="eyebrow">What I Do</div>
+            <h2 class="display text-5xl md:text-7xl mt-5 leading-[.94] max-w-2xl">Services That<br>Help Your Brand Grow</h2>
+          </div>
+          <span class="text-sm font-semibold">Creative strategy + execution →</span>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <article class="service-card reveal">
+            <div class="service-art art-brand" aria-label="Brand identity visual preview"><div class="brand-sheet"><span class="art-label">Brand system</span><span class="brand-mark">R&amp;R</span><span class="brand-name">ROASTRA &amp; RUE</span><span class="brand-line"></span></div></div>
+            <h3 class="font-bold text-lg tracking-tight">Brand Identity</h3>
+            <p class="text-sm text-[#6A6A6A] leading-6 mt-3">Creating distinctive visual identities that reflect your vision, values and audience.</p>
+            <div class="mt-7 font-bold text-sm">↗</div>
+          </article>
+
+          <article class="service-card reveal delay-1">
+            <div class="service-art art-logo" aria-label="Logo design visual preview"><div class="logo-sheet"><div class="logo-symbol">N◈</div><span class="logo-caption">NORTH / STUDIO</span></div></div>
+            <h3 class="font-bold text-lg tracking-tight">Logo Design</h3>
+            <p class="text-sm text-[#6A6A6A] leading-6 mt-3">Designing memorable marks that make your brand instantly recognizable.</p>
+            <div class="mt-7 font-bold text-sm">↗</div>
+          </article>
+
+          <article class="service-card reveal delay-2">
+            <div class="service-art art-ui" aria-label="UI UX interface visual preview"><div class="phone"><div class="phone-head"></div><div class="phone-balance"></div><div class="phone-row"></div><div class="phone-row"></div><div class="phone-row"></div></div><div class="ui-panel"><div class="ui-dot"></div><div class="phone-row"></div><div class="phone-row"></div><div class="phone-row"></div></div></div>
+            <h3 class="font-bold text-lg tracking-tight">UI/UX Design</h3>
+            <p class="text-sm text-[#6A6A6A] leading-6 mt-3">Designing intuitive interfaces and engaging digital experiences for users.</p>
+            <div class="mt-7 font-bold text-sm">↗</div>
+          </article>
+
+          <article class="service-card reveal delay-3">
+            <div class="service-art art-social" aria-label="Social media design visual preview"><div class="social-tile"><span class="social-small">Daily ritual</span><span class="social-big">Live<br>well.</span></div><div class="social-tile"><span class="social-small">New season</span><span class="social-big">Made<br>for you</span></div><div class="social-tile"><span class="social-small">Explore</span><span class="social-big">Find<br>your joy</span></div></div>
+            <h3 class="font-bold text-lg tracking-tight">Social Media</h3>
+            <p class="text-sm text-[#6A6A6A] leading-6 mt-3">Eye-catching social graphics built for clarity, consistency and engagement.</p>
+            <div class="mt-7 font-bold text-sm">↗</div>
+          </article>
+
+          <article class="service-card reveal delay-4">
+            <div class="service-art art-presentation" aria-label="Presentation design visual preview"><div class="slide"><div class="slide-kicker">Strategy / 2026</div><div class="slide-title">Ideas into<br>impact.</div><div class="slide-orb"></div></div></div>
+            <h3 class="font-bold text-lg tracking-tight">Presentation</h3>
+            <p class="text-sm text-[#6A6A6A] leading-6 mt-3">Impactful presentations that communicate ideas clearly and professionally.</p>
+            <div class="mt-7 font-bold text-sm">↗</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 md:py-32 border-y border-line">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-8">
+        <div class="grid lg:grid-cols-[.75fr_1.25fr] gap-12 lg:gap-24 items-start">
+
+          <div class="reveal">
+            <div class="eyebrow">About Me</div>
+            <h2 class="display text-5xl md:text-6xl mt-5 leading-[.95]">Design with<br>purpose.</h2>
+          </div>
+
+          <div class="reveal delay-1">
+            <p class="text-2xl md:text-4xl leading-[1.2] tracking-[-.04em]">
+              I’m a Graphic Designer &amp; Brand Specialist focused on turning ideas into
+              <span class="text-[#777]">clear, memorable and professional visual experiences.</span>
+            </p>
+            <p class="mt-8 max-w-2xl text-[#686868] leading-7">
+              From a single logo to a complete brand system, I combine visual thinking,
+              typography, composition and user-focused design to create work that looks
+              polished and communicates with purpose.
+            </p>
+            <div class="flex flex-wrap gap-3 mt-8">
+              <span class="px-4 py-2 rounded-full border border-line text-xs font-bold">Adobe Illustrator</span>
+              <span class="px-4 py-2 rounded-full border border-line text-xs font-bold">Photoshop</span>
+              <span class="px-4 py-2 rounded-full border border-line text-xs font-bold">Figma</span>
+              <span class="px-4 py-2 rounded-full border border-line text-xs font-bold">Canva</span>
+              <span class="px-4 py-2 rounded-full border border-line text-xs font-bold">Brand Strategy</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="process-section py-24 md:py-28">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-8">
+
+        <div class="grid lg:grid-cols-[.55fr_1.45fr] gap-12 mb-16 reveal">
+          <div>
+            <div class="eyebrow">My Process</div>
+            <h2 class="display text-5xl md:text-6xl mt-5 leading-[.95]">Simple Steps,<br>Powerful Results</h2>
+          </div>
+          <p class="text-white/55 max-w-xl lg:ml-auto lg:pt-8 leading-7">
+            A clear, collaborative process keeps every project focused—from understanding
+            your goals to delivering final, production-ready design files.
+          </p>
+        </div>
+
+        <div class="relative grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-5">
+          <div class="process-line"></div>
+
+          <div class="process-item text-center reveal">
+            <div class="process-icon">◎</div>
+            <h3 class="font-bold">Discover</h3>
+            <p class="text-xs text-white/45 leading-5 mt-3">Understanding your goals, audience and direction.</p>
+          </div>
+
+          <div class="process-item text-center reveal delay-1">
+            <div class="process-icon">✧</div>
+            <h3 class="font-bold">Concept</h3>
+            <p class="text-xs text-white/45 leading-5 mt-3">Exploring ideas and creating a strong design concept.</p>
+          </div>
+
+          <div class="process-item text-center reveal delay-2">
+            <div class="process-icon">⌁</div>
+            <h3 class="font-bold">Design</h3>
+            <p class="text-xs text-white/45 leading-5 mt-3">Bringing the selected direction to life with precision.</p>
+          </div>
+
+          <div class="process-item text-center reveal delay-3">
+            <div class="process-icon">☷</div>
+            <h3 class="font-bold">Refine</h3>
+            <p class="text-xs text-white/45 leading-5 mt-3">Polishing details and refining the work for consistency.</p>
+          </div>
+
+          <div class="process-item text-center reveal delay-4">
+            <div class="process-icon">↗</div>
+            <h3 class="font-bold">Deliver</h3>
+            <p class="text-xs text-white/45 leading-5 mt-3">Delivering organized, high-quality final files.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN APPROACH: honest alternative to testimonials -->
+    <section id="approach" class="py-24 md:py-32">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-8">
+        <div class="grid lg:grid-cols-[.7fr_1.3fr] gap-12 items-start">
+          <div class="reveal">
+            <div class="eyebrow">My Approach</div>
+            <h2 class="display text-5xl md:text-6xl mt-5 leading-[.95]">Thoughtful design.<br>Clear purpose.</h2>
+            <p class="text-sm text-[#707070] leading-6 mt-6 max-w-sm">
+              I create self-initiated concept projects to explore visual ideas and demonstrate my design skills. Every project starts with a clear goal and an audience in mind.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4">
+            <article class="testimonial reveal delay-1">
+              <div class="quote">01</div>
+              <h3 class="font-bold text-sm mt-4">Purpose-led concepts</h3>
+              <p class="text-sm leading-6 mt-3">Design decisions begin with the brand’s audience, goals and intended message—not decoration alone.</p>
+            </article>
+            <article class="testimonial reveal delay-2">
+              <div class="quote">02</div>
+              <h3 class="font-bold text-sm mt-4">Consistent visual systems</h3>
+              <p class="text-sm leading-6 mt-3">Color, typography and layout work together to create a clear, recognizable visual direction.</p>
+            </article>
+            <article class="testimonial reveal delay-3">
+              <div class="quote">03</div>
+              <h3 class="font-bold text-sm mt-4">Careful delivery</h3>
+              <p class="text-sm leading-6 mt-3">I aim for organized files, thoughtful details and designs tailored to each project brief.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="contact-section py-24 md:py-32">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-8 relative z-10">
+        <div class="max-w-5xl reveal">
+          <div class="eyebrow text-white/75">Have a project in mind?</div>
+          <h2 class="display contact-title mt-6">Let’s create<br>something<br>memorable.</h2>
+          <div class="flex flex-wrap gap-4 mt-10">
+            <a href="https://www.upwork.com/freelancers/~01c1aa1a3206b35d54" target="_blank" rel="noopener" class="btn bg-white text-ink hover:bg-black hover:text-white magnetic" data-magnetic>
+              Hire Me on Upwork <span>↗</span>
+            </a>
+            <a href="mailto:hello@hinashoukat.design" class="btn border border-white/40 text-white hover:bg-white hover:text-ink">
+              Email Me <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0D0D0D] text-white py-8">
+    <div class="mx-auto max-w-[1320px] px-5 md:px-8 flex flex-col md:flex-row items-center justify-between gap-5">
+      <div class="logo-mark">HS</div>
+      <div class="text-xs text-white/45 text-center">Graphic Designer &amp; Brand Specialist</div>
+      <div class="flex gap-5 text-xs text-white/55">
+        <a href="#work" class="hover:text-white transition">Work</a>
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal-panel p-5 md:p-8">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <div class="eyebrow">Selected Project</div>
+          <h3 id="modalTitle" class="display text-4xl mt-2">Project</h3>
+        </div>
+        <button class="close-btn" id="modalClose" aria-label="Close">×</button>
+      </div>
+      <div id="modalVisual" class="modal-visual pf"></div>
+      <div class="case-study-grid" id="caseStudyGrid">
+        <div class="case-study-tile"><span class="case-kicker">01 / Identity</span><strong id="caseLogo">Primary logo direction</strong><small>Original portfolio concept</small></div>
+        <div class="case-study-tile"><span class="case-kicker">02 / Color system</span><div class="swatches" id="caseSwatches"><i></i><i></i><i></i><i></i></div><small>Palette exploration</small></div>
+        <div class="case-study-tile"><span class="case-kicker">03 / Applications</span><strong id="caseApplications">Packaging · digital · print</strong><small>Illustrative mockup direction</small></div>
+      </div>
+      <div class="grid md:grid-cols-[1fr_auto] gap-8 mt-7">
+        <div>
+          <h4 class="font-bold text-lg">Project Overview</h4>
+          <p id="modalText" class="text-sm text-[#686868] leading-7 mt-3 max-w-2xl"></p>
+        </div>
+        <div class="text-sm">
+          <div class="text-[#888]">Category</div>
+          <div id="modalCategory" class="font-bold mt-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHOWREEL MODAL -->
+  <div class="modal" id="showreelModal" role="dialog" aria-modal="true" aria-label="Showreel">
+    <div class="modal-panel p-5 md:p-8">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <div class="eyebrow">Showreel</div>
+          <h3 class="display text-4xl mt-2">A glimpse into my work</h3>
+        </div>
+        <button class="close-btn" id="showreelClose" aria-label="Close">×</button>
+      </div>
+      <div class="aspect-video rounded-2xl bg-[#111] text-white grid place-items-center overflow-hidden relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(49,87,255,.35),transparent_45%)]"></div>
+        <div class="relative text-center">
+          <div class="spin-loop mx-auto w-24 h-24 rounded-full border border-white/30 grid place-items-center text-3xl">▶</div>
+          <p class="mt-6 text-sm text-white/55">Add your showreel video here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Page reveal
+    window.addEventListener('load', () => {
+      document.body.classList.remove('preload');
+      document.body.classList.add('loaded');
+    });
+
+    // Header shrink on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    }, {passive:true});
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuToggle.textContent = mobileMenu.classList.contains('open') ? '×' : '☰';
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.textContent = '☰';
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12});
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Animated counters
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = Number(el.dataset.target);
+        const start = performance.now();
+        const duration = 1300;
+
+        function tick(now){
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1-progress, 3);
+          el.textContent = Math.round(target * eased) + '+';
+          if(progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterObserver.unobserve(el);
+      });
+    }, {threshold:.8});
+    counters.forEach(el => counterObserver.observe(el));
+
+    // Magnetic buttons
+    if(window.matchMedia('(pointer:fine)').matches){
+      document.querySelectorAll('[data-magnetic]').forEach(el => {
+        el.addEventListener('mousemove', e => {
+          const r = el.getBoundingClientRect();
+          const x = (e.clientX - (r.left + r.width/2)) * .14;
+          const y = (e.clientY - (r.top + r.height/2)) * .14;
+          el.style.transform = `translate(${x}px,${y}px)`;
+        });
+        el.addEventListener('mouseleave', () => {
+          el.style.transform = '';
+        });
+      });
+    }
+
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    if(window.matchMedia('(pointer:fine)').matches){
+      window.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+
+      document.querySelectorAll('a,button,.project-card,.service-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('big'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+      });
+    }
+
+    // Hero subtle mouse parallax
+    const portrait = document.getElementById('portraitParallax');
+    if(window.matchMedia('(pointer:fine)').matches){
+      window.addEventListener('mousemove', e => {
+        const x = (e.clientX / window.innerWidth - .5) * 10;
+        const y = (e.clientY / window.innerHeight - .5) * 10;
+        portrait.style.transform = `translate(${x}px,${y}px)`;
+      });
+    }
+
+    // Project modal
+    const projectModal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalVisual = document.getElementById('modalVisual');
+
+    const projectData = {
+      "Vellunora Home": {
+        category: "Brand Identity Design",
+        visual: "pf",
+        text: "A clean, calming beauty and wellness visual direction focused on abundance, peace and fulfillment. The system is designed to translate across social media, Shopify and promotional content."
+      },
+      "Orivelle Pay": {
+        category: "Fintech Brand Identity",
+        visual: "aska",
+        text: "A contemporary fintech identity direction for an AI-powered financial decision companion. The visual language combines trust, clarity and digital sophistication."
+      },
+      "Cindervoyage": {
+        category: "Travel Agency Branding",
+        visual: "ember",
+        text: "An original, self-initiated premium travel branding concept combining a refined wordmark with a subtle fire-inspired visual language to communicate adventure, warmth and elevated travel."
+      },
+      "KoffiRuna": {category:"Logo Design & Brand Identity",visual:"bean",text:"A fictional specialty coffee shop concept exploring a warm, premium identity through original typography, forest-green and cream colors, and adaptable packaging direction. Self-initiated portfolio work."},
+      "Zappawisp": {category:"Mascot Logo Design",visual:"mascot",text:"An original mascot-style logo direction for a fictional gaming and creator brand. The bold character-inspired symbol and high-energy purple palette are designed to feel friendly, memorable and flexible across avatars and merchandise."},
+      "Folivanta": {category:"Symbol Logo Design",visual:"symbol",text:"A minimal symbol-mark concept for a fictional botanical skincare brand. The simple geometric emblem and natural palette demonstrate how a distinctive icon can work across labels, packaging and digital touchpoints."},
+      "Solivique": {category:"Social Media Design",visual:"social",text:"A fictional lifestyle campaign showing a consistent social media art direction with bright color, clear hierarchy and short, attention-led messaging. Created as a self-initiated design concept."},
+      "Virello Ledger": {category:"UI/UX Design",visual:"uiux",text:"A concept interface for a fictional personal-finance app, exploring a dashboard layout, readable information hierarchy and a calm, high-contrast visual system. This is a visual concept, not a working product."},
+      "Deckora Atelier": {category:"Presentation Design",visual:"pitch",text:"A fictional business pitch-deck visual direction focused on clear storytelling, strong typography and high-contrast slides. The concept demonstrates presentation layout and information hierarchy."},
+      "Saffrelune": {category:"Editorial, Flyer & Brochure Design",visual:"editorial",text:"A fictional food-journal cover and print-layout direction using editorial typography and a warm palette. This concept can be adapted into a brochure, menu or promotional flyer."},
+      "Kinetara Motion": {category:"Brand Identity & Advertising Design",visual:"fitness",text:"An original identity concept for a fictional fitness brand, combining a bold wordmark, high-energy contrast and campaign-ready messaging for digital promotions and apparel."},
+      "Pixora Rift": {category:"Lettermark Logo Design",visual:"gaming",text:"A fictional gaming-community identity concept built around a bold lettermark and vivid digital colors. The concept is intended for use across social avatars, streaming overlays and community graphics."},
+      "Bravelynt": {category:"Advertising & Banner Design",visual:"campaign",text:"A self-initiated digital advertising concept for a fictional growth and coaching brand, focused on a strong headline, accessible contrast and adaptable banner composition."}
+    };
+
+    const caseStudyDetails = {
+      "Vellunora Home": {logo:"Soft, confident wordmark",applications:"Labels · packaging · social",colors:["#164a42","#d9efe9","#f4f1e9","#b9d8ce"]},
+      "Orivelle Pay": {logo:"Trust-led fintech wordmark",applications:"App UI · onboarding · pitch deck",colors:["#3157ff","#e7efff","#172554","#ffffff"]},
+      "Cindervoyage": {logo:"Refined travel wordmark",applications:"Travel journal · cards · web",colors:["#151515","#f27b38","#c7a46a","#f5eee3"]},
+      "KoffiRuna": {logo:"Editorial café wordmark",applications:"Cups · bags · menu · social",colors:["#173f35","#e6d2ad","#f8edda","#315d4b"]},
+      "Zappawisp": {logo:"Friendly mascot identity",applications:"Avatar · stream overlay · merch",colors:["#5a189a","#ffd166","#9d4edd","#240046"]},
+      "Folivanta": {logo:"Minimal botanical symbol",applications:"Labels · cartons · skincare social",colors:["#153b32","#f3e8d3","#d7e4de","#8a9b72"]},
+      "Solivique": {logo:"Bright lifestyle campaign system",applications:"Carousel · stories · ad creatives",colors:["#ff6b6b","#ffb703","#fb8500","#222222"]},
+      "Virello Ledger": {logo:"Clear digital product identity",applications:"Dashboard · onboarding · UI kit",colors:["#071b35","#164e63","#6fffe9","#e8ffff"]},
+      "Deckora Atelier": {logo:"Bold editorial presentation system",applications:"Pitch deck · charts · title slides",colors:["#171717","#343434","#b5ff6d","#f5f0e8"]},
+      "Saffrelune": {logo:"Warm editorial print direction",applications:"Journal · menu · brochure",colors:["#542a22","#f8e8d8","#dba58f","#fff7ee"]},
+      "Kinetara Motion": {logo:"High-energy fitness wordmark",applications:"Apparel · social ads · posters",colors:["#111111","#292929","#b6ff3b","#ffffff"]},
+      "Pixora Rift": {logo:"Bold gaming lettermark",applications:"Gaming avatar · banners · stream",colors:["#101027","#29235c","#ff4ecd","#f6f1ff"]},
+      "Bravelynt": {logo:"Optimistic campaign identity",applications:"Web banners · ad sets · carousels",colors:["#263a85","#dce7ff","#f4f0ff","#b8c8ff"]}
+    };
+    function openProject(name){
+      const data = projectData[name];
+      const detail = caseStudyDetails[name] || {logo:"Original visual identity direction",applications:"Digital · print · social",colors:["#222222","#3157ff","#f4f1e9","#b6ff3b"]};
+      document.getElementById('caseLogo').textContent = detail.logo;
+      document.getElementById('caseApplications').textContent = detail.applications;
+      document.querySelectorAll('#caseSwatches i').forEach((swatch,i)=>swatch.style.setProperty('--swatch',detail.colors[i]));
+      modalTitle.textContent = name;
+      modalCategory.textContent = data.category;
+      modalText.textContent = data.text;
+      modalVisual.className = 'modal-visual ' + data.visual;
+      projectModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modal){
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.project-open').forEach(card => {
+      card.addEventListener('click', () => openProject(card.dataset.project));
+    });
+    document.getElementById('modalClose').addEventListener('click', () => closeModal(projectModal));
+
+    // Showreel modal
+    const showreelModal = document.getElementById('showreelModal');
+    document.getElementById('showreelBtn').addEventListener('click', () => {
+      showreelModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('showreelClose').addEventListener('click', () => closeModal(showreelModal));
+
+    // Close modal by backdrop / Escape
+    [projectModal, showreelModal].forEach(modal => {
+      modal.addEventListener('click', e => {
+        if(e.target === modal) closeModal(modal);
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape'){
+        closeModal(projectModal);
+        closeModal(showreelModal);
+      }
+    });
+
+    // Theme button: subtle dark-mode style for the whole site
+    const themeToggle = document.getElementById('themeToggle');
+    let darkMode = false;
+    themeToggle?.addEventListener('click', () => {
+      darkMode = !darkMode;
+      document.documentElement.style.setProperty('--paper', darkMode ? '#111111' : '#F7F6F2');
+      document.documentElement.style.setProperty('--ink', darkMode ? '#F7F6F2' : '#111111');
+      document.documentElement.style.setProperty('--line', darkMode ? '#2D2D2D' : '#E7E5DF');
+      document.body.style.background = darkMode ? '#111111' : '#F7F6F2';
+      document.body.style.color = darkMode ? '#F7F6F2' : '#111111';
+      themeToggle.textContent = darkMode ? '☀' : '☾';
+    });
+  </script>
+</body>
+</html>
